@@ -10,7 +10,6 @@ function ToDoForm({onSubmit}: Props) {
     const handleForm = (data: Task)=> {
         onSubmit(data);
         reset();
-        console.log(data)
     }
 
     return <>

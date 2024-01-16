@@ -10,6 +10,7 @@ export interface Task {
     checked: boolean
 }
 
+
 function Todo() {
     const [tasks, setTasks] = useState<Task[]>([]);
 
@@ -38,12 +39,14 @@ function Todo() {
         });
     }
 
-    const editTask = (value: string, id: string)=> {
+    const editTask = (value: string, id: string) => {
         setTasks((prevState) => {
-            return prevState.map(el => el.id === id ? {...el, task: value, isEditing: !el.isEditing} : el
-            )
+            return prevState.map((el) =>
+                el.id === id ? { ...el, task: value, isEditing: !el.isEditing } : el
+            );
         });
-    }
+    };
+
 
     return <>
         <div className="todo-wrapper">

@@ -14,7 +14,7 @@ interface TaskList {
     onDelete: (id: string) => void;
     onChecked: (value: string)=> void;
     handleEdit: (value: string)=> void;
-    editTask: (value: string)=> void;
+    editTask: (value: string, id: string)=> void;
 }
 
 export default function TodoList({tasks, onDelete, onChecked, handleEdit, editTask}: TaskList) {
